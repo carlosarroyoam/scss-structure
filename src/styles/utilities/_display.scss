@@ -1,0 +1,16 @@
+// Small display utilities for exceptional composition cases.
+
+@layer utilities {
+  .block {
+    display: block;
+  }
+
+  .full-width {
+    inline-size: 100%;
+  }
+
+  [hidden],
+  .hidden {
+    display: none;
+  }
+}

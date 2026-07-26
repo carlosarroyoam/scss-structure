@@ -1,0 +1,22 @@
+/// Applies the shared accessible focus indicator.
+///
+/// The colors and dimensions come from the semantic token layer so themes can
+/// provide their own contrast-safe values.
+@mixin focus-ring {
+  outline: var(--focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/// Emits content only when the user has not requested reduced motion.
+@mixin motion-safe {
+  @media (prefers-reduced-motion: no-preference) {
+    @content;
+  }
+}
+
+/// Emits content only when the user has requested reduced motion.
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

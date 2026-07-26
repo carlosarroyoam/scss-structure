@@ -1,0 +1,30 @@
+@layer base {
+  body {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-normal);
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: var(--line-height-tight);
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: var(--font-size-xl);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  p {
+    max-inline-size: 70ch;
+    text-wrap: pretty;
+  }
+
+  code {
+    font-family: var(--font-mono);
+  }
+}

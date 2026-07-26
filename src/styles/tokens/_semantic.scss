@@ -1,0 +1,51 @@
+@use 'primitives';
+
+/// Emits non-theme-dependent semantic custom properties.
+///
+/// This mixin is included once by `src/styles.scss`; components should consume
+/// the resulting variables and must not include this mixin themselves.
+@mixin emit-foundation {
+  @layer tokens {
+    :root {
+      @each $step, $value in primitives.$space {
+        --space-#{$step}: #{$value};
+      }
+
+      @each $name, $value in primitives.$radius {
+        --radius-#{$name}: #{$value};
+      }
+
+      --font-sans:
+        inter, ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', sans-serif;
+      --font-mono: 'Cascadia Code', 'SFMono-Regular', consolas, monospace;
+      --font-size-sm: 0.875rem;
+      --font-size-md: 1rem;
+      --font-size-lg: 1.25rem;
+      --font-size-xl: clamp(2rem, 5vw, 3.5rem);
+
+      --line-height-tight: 1.2;
+      --line-height-normal: 1.6;
+
+      --font-weight-normal: 400;
+      --font-weight-medium: 600;
+      --font-weight-bold: 700;
+
+      --shadow-sm: 0 0.125rem 0.5rem rgb(15 23 42 / 8%);
+      --shadow-md: 0 1rem 2.5rem rgb(15 23 42 / 12%);
+
+      --duration-fast: 120ms;
+      --duration-normal: 200ms;
+
+      --easing-standard: cubic-bezier(0.2, 0, 0, 1);
+
+      --focus-ring-width: 0.1875rem;
+      --focus-ring-offset: 0.1875rem;
+
+      --content-max-width: 72rem;
+
+      --z-header: 10;
+      --z-overlay: 100;
+      --z-modal: 1000;
+    }
+  }
+}

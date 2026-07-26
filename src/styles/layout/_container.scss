@@ -1,0 +1,8 @@
+// Centers content while respecting the shared maximum width and page gutter.
+
+@layer layout {
+  .container {
+    inline-size: min(100% - (2 * var(--space-5)), var(--content-max-width));
+    margin-inline: auto;
+  }
+}

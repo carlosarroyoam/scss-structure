@@ -1,0 +1,25 @@
+@use 'light';
+@use 'dark';
+
+/// Emits light, dark and system-preference theme selectors.
+///
+/// `data-theme="light|dark"` explicitly overrides the system preference. If
+/// the attribute is absent, `prefers-color-scheme` selects the dark values.
+@mixin emit-themes {
+  @layer tokens {
+    :root,
+    :root[data-theme='light'] {
+      @include light.values;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        @include dark.values;
+      }
+    }
+
+    :root[data-theme='dark'] {
+      @include dark.values;
+    }
+  }
+}

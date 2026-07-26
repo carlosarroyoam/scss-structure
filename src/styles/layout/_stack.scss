@@ -1,0 +1,9 @@
+// Vertical flow layout. Override `--stack-space` locally when needed.
+
+@layer layout {
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--stack-space, var(--space-4));
+  }
+}

@@ -1,0 +1,32 @@
+@layer base {
+  :root {
+    color-scheme: var(--color-scheme);
+    font-family: var(--font-sans);
+    font-synthesis: none;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    color: var(--color-text-primary);
+    background: var(--color-background);
+    transition:
+      color var(--duration-normal) var(--easing-standard),
+      background-color var(--duration-normal) var(--easing-standard);
+  }
+
+  a {
+    color: var(--color-action-primary);
+    text-underline-offset: 0.2em;
+  }
+
+  a:hover {
+    color: var(--color-action-primary-hover);
+  }
+
+  ::selection {
+    color: var(--color-on-action);
+    background: var(--color-action-primary);
+  }
+}

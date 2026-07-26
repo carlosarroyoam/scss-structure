@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'styles/tokens';
+@use 'styles/themes';
+@use 'styles/base/reset';
+@use 'styles/base/document';
+@use 'styles/base/typography';
+@use 'styles/base/accessibility';
+@use 'styles/layout/container';
+@use 'styles/layout/stack';
+@use 'styles/layout/cluster';
+@use 'styles/utilities';
+@layer reset, tokens, base, layout, utilities;
+@include tokens.emit-foundation;
+@include themes.emit-themes;

@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+/// Converts a unitless pixel value to `rem`.
+///
+/// @example scss - Produce a 24px spacing value.
+///   padding: tools.rem(24);
+///
+/// @param {Number} $pixels - The value expressed against the base font size.
+/// @param {Number} $base [16] - The base pixel value.
+/// @return {Number} The equivalent `rem` value.
+@function rem($pixels, $base: 16) {
+  @if not math.is-unitless($pixels) or not math.is-unitless($base) {
+    @error 'rem() expects unitless pixel values.';
+  }
+
+  @return math.div($pixels, $base) * 1rem;
+}
