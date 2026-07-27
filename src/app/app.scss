@@ -8,7 +8,7 @@
 .app-header {
   position: sticky;
   inset-block-start: 0;
-  z-index: var(--z-header);
+  z-index: var(--z-10);
   background: color-mix(in srgb, var(--color-surface) 92%, transparent);
   border-block-end: 1px solid var(--color-border);
   backdrop-filter: blur(0.75rem);
@@ -25,7 +25,7 @@
 .theme-selector {
   --cluster-space: var(--space-1);
 
-  padding: var(--space-1);
+  padding: var(--space-0-5);
   background: var(--color-surface-muted);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-pill);
@@ -48,7 +48,7 @@
 .app-main {
   --stack-space: var(--space-8);
 
-  padding-block: clamp(var(--space-7), 8vw, 7rem);
+  padding-block: var(--space-16);
 }
 
 .hero {
@@ -66,7 +66,7 @@
 
   &__summary {
     color: var(--color-text-secondary);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
   }
 }
 
@@ -87,7 +87,7 @@
 .principle {
   --stack-space: var(--space-3);
 
-  padding: var(--space-5);
+  padding: var(--space-4) var(--space-6);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);

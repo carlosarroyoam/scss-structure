@@ -1,25 +1,15 @@
 @use 'sass:map';
-
-/// Responsive breakpoints shared by layouts and components.
-///
-/// Keep these values in `rem` so media queries follow the user's root font size.
-$breakpoints: (
-  'sm': 36rem,
-  'md': 48rem,
-  'lg': 64rem,
-  'xl': 80rem,
-  'xxl': 96rem,
-);
+@use '../tokens/primitives';
 
 /// Returns the viewport width associated with a named breakpoint.
 ///
 /// @param {String} $name - One of `sm`, `md`, `lg`, 'xl' or `xxl`.
 /// @return {Number} The breakpoint value in `rem`.
 @function breakpoint($name) {
-  $value: map.get($breakpoints, $name);
+  $value: map.get(primitives.$breakpoints, $name);
 
   @if not $value {
-    @error 'Unknown breakpoint "#{$name}". Available breakpoints: #{map.keys($breakpoints)}.';
+    @error 'Unknown breakpoint "#{$name}". Available breakpoints: #{map.keys(primitives.$breakpoints)}.';
   }
 
   @return $value;
@@ -32,7 +22,7 @@ $breakpoints: (
 ///     grid-template-columns: repeat(3, 1fr);
 ///   }
 ///
-/// @param {String} $name - A key from `$breakpoints`.
+/// @param {String} $name - A key from `primitives.$breakpoints`.
 @mixin respond-to($name) {
   @media (width >= breakpoint($name)) {
     @content;
@@ -46,7 +36,7 @@ $breakpoints: (
 ///     display: none;
 ///   }
 ///
-/// @param {String} $name - A key from `$breakpoints`.
+/// @param {String} $name - A key from `primitives.$breakpoints`.
 @mixin respond-below($name) {
   @media (width < breakpoint($name)) {
     @content;

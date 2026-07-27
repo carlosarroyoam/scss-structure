@@ -12,11 +12,15 @@
   }
 
   h1 {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-3xl);
   }
 
   h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: var(--font-size-2xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-lg);
   }
 
   p {

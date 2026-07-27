@@ -18,10 +18,14 @@
       --font-sans:
         inter, ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', sans-serif;
       --font-mono: 'Cascadia Code', 'SFMono-Regular', consolas, monospace;
+
+      --font-size-xs: 0.75rem;
       --font-size-sm: 0.875rem;
       --font-size-md: 1rem;
-      --font-size-lg: 1.25rem;
-      --font-size-xl: clamp(2rem, 5vw, 3.5rem);
+      --font-size-lg: 1.125rem;
+      --font-size-xl: 1.25rem;
+      --font-size-2xl: 1.5rem;
+      --font-size-3xl: 1.875rem;
 
       --line-height-tight: 1.2;
       --line-height-normal: 1.6;
@@ -43,9 +47,13 @@
 
       --content-max-width: 72rem;
 
-      --z-header: 10;
-      --z-overlay: 100;
-      --z-modal: 1000;
+      --z-0: 0;
+      --z-10: 10;
+      --z-20: 20;
+      --z-30: 30;
+      --z-40: 40;
+      --z-50: 50;
+      --z-auto: auto;
     }
   }
 }
