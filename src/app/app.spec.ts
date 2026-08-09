@@ -1,9 +1,11 @@
 import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import axe from 'axe-core';
 
 import { THEME_PREFERENCE_KEY } from '@/core/constants/storage-keys.constants';
 import { LocalStorageService } from '@/core/data-access/services/storage-service/local-storage-service';
 import { App } from './app';
+import { routes } from './app.routes';
 
 describe('App', () => {
   beforeEach(async () => {
@@ -12,6 +14,7 @@ describe('App', () => {
 
     await TestBed.configureTestingModule({
       imports: [App],
+      providers: [provideRouter(routes)],
     }).compileComponents();
   });
 
@@ -19,14 +22,6 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
 
     expect(fixture.componentInstance).toBeTruthy();
-  });
-
-  it('renders the architecture introduction', async () => {
-    const fixture = TestBed.createComponent(App);
-    await fixture.whenStable();
-    const compiled = fixture.nativeElement as HTMLElement;
-
-    expect(compiled.querySelector('h1')?.textContent).toContain('Una base visual');
   });
 
   it('applies and persists an explicit theme preference', async () => {

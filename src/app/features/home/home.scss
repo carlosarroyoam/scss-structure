@@ -1,0 +1,54 @@
+@use 'styles/tools' as tools;
+
+@layer components {
+  :host {
+    display: contents;
+  }
+
+  .hero {
+    --stack-space: var(--space-4);
+
+    max-inline-size: 52rem;
+
+    &__eyebrow {
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-action-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    &__summary {
+      font-size: var(--font-size-md);
+      color: var(--color-text-secondary);
+    }
+  }
+
+  .principles {
+    --stack-space: var(--space-5);
+
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+
+      @include tools.respond-to('md') {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  .principle {
+    --stack-space: var(--space-3);
+
+    padding: var(--space-4) var(--space-6);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+
+    p {
+      color: var(--color-text-secondary);
+    }
+  }
+}
