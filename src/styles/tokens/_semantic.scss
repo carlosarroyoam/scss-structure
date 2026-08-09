@@ -31,7 +31,7 @@
       --line-height-normal: 1.6;
 
       --font-weight-normal: 400;
-      --font-weight-medium: 600;
+      --font-weight-medium: 500;
       --font-weight-bold: 700;
 
       --shadow-sm: 0 0.125rem 0.5rem rgb(15 23 42 / 8%);
@@ -54,6 +54,14 @@
       --z-40: 40;
       --z-50: 50;
       --z-auto: auto;
+
+      // Semantic aliases: prefer these over the numeric scale above so new
+      // stacking contexts are placed relative to their purpose, not a guess.
+      --z-sticky: var(--z-10);
+      --z-dropdown: var(--z-20);
+      --z-overlay: var(--z-30);
+      --z-modal: var(--z-40);
+      --z-toast: var(--z-50);
     }
   }
 }

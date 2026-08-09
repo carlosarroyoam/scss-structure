@@ -9,7 +9,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "ng lint",
-    "lint:styles": "stylelint \"src/**/*.scss\"",
+    "lint:styles": "stylelint \"src/**/*.scss\" --fix",
+    "lint:styles:check": "stylelint \"src/**/*.scss\"",
     "test": "ng test"
   },
   "private": true,
@@ -37,6 +38,7 @@
     "jsdom": "^28.0.0",
     "prettier": "^3.9.6",
     "stylelint": "^17.14.1",
+    "stylelint-config-recess-order": "^7.7.0",
     "stylelint-config-standard-scss": "^17.0.0",
     "stylelint-scss": "^7.2.0",
     "typescript": "~6.0.2",

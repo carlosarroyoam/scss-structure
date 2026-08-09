@@ -1,8 +1,8 @@
 @layer base {
   :root {
-    color-scheme: var(--color-scheme);
     font-family: var(--font-sans);
     font-synthesis: none;
+    color-scheme: var(--color-scheme);
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

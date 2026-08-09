@@ -55,33 +55,3 @@ $radius: (
   xl: 0.75rem,
   pill: 999rem,
 );
-
-$light-colors: (
-  background: #f7f8fa,
-  surface: #fff,
-  surface-muted: #edf1f6,
-  text-primary: #172033,
-  text-secondary: #526077,
-  border: #c5cdd8,
-  action-primary: #2457c5,
-  action-primary-hover: #183f96,
-  on-action: #fff,
-  focus-ring: #075fb9,
-  success: #147a42,
-  danger: #b42318,
-);
-
-$dark-colors: (
-  background: #111827,
-  surface: #182235,
-  surface-muted: #233047,
-  text-primary: #f6f8fb,
-  text-secondary: #bdc7d8,
-  border: #526178,
-  action-primary: #8ab4ff,
-  action-primary-hover: #b6ceff,
-  on-action: #0b1730,
-  focus-ring: #9dc1ff,
-  success: #76d49d,
-  danger: #ffb4ab,
-);

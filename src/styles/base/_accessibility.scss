@@ -19,4 +19,14 @@
       animation-iteration-count: 1;
     }
   }
+
+  // Windows High Contrast / forced-colors mode replaces most author colors
+  // with a limited system palette. `--color-focus-ring` may not survive that
+  // substitution reliably, so pin the indicator to the system-defined
+  // highlight color instead.
+  @media (forced-colors: active) {
+    :focus-visible {
+      outline-color: Highlight;
+    }
+  }
 }

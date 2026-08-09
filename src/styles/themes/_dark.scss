@@ -1,8 +1,8 @@
-@use '../tokens/primitives';
+@use 'palette';
 
 // Theme values are private implementation details of `emit-themes`.
 @mixin values {
-  @each $name, $value in primitives.$dark-colors {
+  @each $name, $value in palette.$dark-colors {
     --color-#{$name}: #{$value};
   }
 

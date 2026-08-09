@@ -1,8 +1,13 @@
-// Centers content while respecting the shared maximum width and page gutter.
+// Centers content while respecting the shared maximum width. The gutter
+// scales with the viewport; override `--container-gutter` locally for
+// exceptions, following the same pattern as `--stack-space`/`--cluster-space`.
 
 @layer layout {
   .container {
-    inline-size: min(100% - (2 * var(--space-5)), var(--content-max-width));
+    inline-size: min(
+      100% - (2 * var(--container-gutter, clamp(var(--space-5), 4vw, var(--space-8)))),
+      var(--content-max-width)
+    );
     margin-inline: auto;
   }
 }

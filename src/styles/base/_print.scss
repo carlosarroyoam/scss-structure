@@ -1,0 +1,15 @@
+// Print-only concerns. Kept intentionally small: overriding every component's
+// colors for print would require `!important` (disallowed by lint), so this
+// focuses on structural noise that is safe to remove from any page.
+
+@layer base {
+  @media print {
+    .skip-link {
+      display: none;
+    }
+
+    a[href^='http']::after {
+      content: ' (' attr(href) ')';
+    }
+  }
+}

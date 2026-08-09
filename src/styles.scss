@@ -4,10 +4,12 @@
 @use 'styles/base/document';
 @use 'styles/base/typography';
 @use 'styles/base/accessibility';
+@use 'styles/base/print';
 @use 'styles/layout/container';
 @use 'styles/layout/stack';
 @use 'styles/layout/cluster';
 @use 'styles/utilities';
-@layer reset, tokens, base, layout, utilities;
+
+@layer reset, tokens, base, layout, components, utilities;
 @include tokens.emit-foundation;
 @include themes.emit-themes;
