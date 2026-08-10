@@ -1,88 +1,88 @@
-<section class="style-guide__intro" aria-labelledby="style-guide-title">
+<section class="intro" aria-labelledby="style-guide-title">
   <h1 id="style-guide-title">Guía de estilos</h1>
-  <p class="style-guide__summary">
+  <p class="summary">
     Documentación viva de los tokens definidos en <code>src/styles/</code>. Cambia el tema desde el
     encabezado para comprobar que los colores responden en vivo.
   </p>
 </section>
 
-<section class="style-guide__section" aria-labelledby="colors-title">
+<section class="section" aria-labelledby="colors-title">
   <h2 id="colors-title">Colores</h2>
 
-  <div class="style-guide__swatch-grid">
+  <div class="swatch-grid">
     @for (token of colorTokens; track token.variable) {
-      <div class="style-guide__swatch">
-        <span class="style-guide__swatch-color" [style.background]="token.style"></span>
+      <div class="swatch">
+        <span class="swatch-color" [style.background]="token.style"></span>
         <code>{{ token.variable }}</code>
       </div>
     }
   </div>
 </section>
 
-<section class="style-guide__section" aria-labelledby="spacing-title">
+<section class="section" aria-labelledby="spacing-title">
   <h2 id="spacing-title">Espaciado</h2>
 
-  <div class="style-guide__scale">
+  <div class="scale">
     @for (token of spaceTokens; track token.variable) {
-      <div class="style-guide__scale-row">
-        <span class="style-guide__scale-bar" [style.inline-size]="token.style"></span>
+      <div class="scale-row">
+        <span class="scale-bar" [style.inline-size]="token.style"></span>
         <code>{{ token.variable }}</code>
-        <span class="style-guide__scale-label">{{ token.label }}</span>
+        <span class="scale-label">{{ token.label }}</span>
       </div>
     }
   </div>
 </section>
 
-<section class="style-guide__section" aria-labelledby="radius-title">
+<section class="section" aria-labelledby="radius-title">
   <h2 id="radius-title">Bordes redondeados</h2>
 
-  <div class="style-guide__swatch-grid">
+  <div class="swatch-grid">
     @for (token of radiusTokens; track token.variable) {
-      <div class="style-guide__swatch">
-        <span class="style-guide__radius-box" [style.border-radius]="token.style"></span>
+      <div class="swatch">
+        <span class="radius-box" [style.border-radius]="token.style"></span>
         <code>{{ token.variable }}</code>
-        <span class="style-guide__scale-label">{{ token.label }}</span>
+        <span class="scale-label">{{ token.label }}</span>
       </div>
     }
   </div>
 </section>
 
-<section class="style-guide__section" aria-labelledby="typography-title">
+<section class="section" aria-labelledby="typography-title">
   <h2 id="typography-title">Tipografía</h2>
 
-  <div class="style-guide__scale">
+  <div class="scale">
     @for (token of fontSizeTokens; track token.variable) {
-      <p class="style-guide__type-sample" [style.font-size]="token.style">
+      <p class="type-sample" [style.font-size]="token.style">
         {{ token.variable }} — {{ token.label }}
       </p>
     }
   </div>
 
-  <div class="style-guide__scale">
+  <div class="scale">
     @for (token of fontWeightTokens; track token.variable) {
-      <p class="style-guide__type-sample" [style.font-weight]="token.style">
+      <p class="type-sample" [style.font-weight]="token.style">
         {{ token.variable }} ({{ token.label }})
       </p>
     }
   </div>
 </section>
 
-<section class="style-guide__section" aria-labelledby="shadows-title">
+<section class="section" aria-labelledby="shadows-title">
   <h2 id="shadows-title">Sombras</h2>
 
-  <div class="style-guide__swatch-grid">
+  <div class="swatch-grid">
     @for (token of shadowTokens; track token.variable) {
-      <div class="style-guide__shadow-card" [style.box-shadow]="token.style">
+      <div class="shadow-card" [style.box-shadow]="token.style">
         <code>{{ token.variable }}</code>
       </div>
     }
   </div>
 </section>
 
-<section class="style-guide__section" aria-labelledby="z-index-title">
+<section class="section" aria-labelledby="z-index-title">
   <h2 id="z-index-title">Índice de apilamiento</h2>
 
-  <ul class="style-guide__z-list">
+  <ul class="z-list">
     @for (token of zIndexTokens; track token.variable) {
       <li>
         <code>{{ token.variable }}</code> — {{ token.label }}
