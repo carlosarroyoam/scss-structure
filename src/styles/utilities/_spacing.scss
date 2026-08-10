@@ -2,6 +2,6 @@
 
 @layer utilities {
   .flow > * + * {
-    margin-block-start: var(--flow-space, var(--space-4));
+    margin-block-start: var(--flow-space, var(--spacing-4));
   }
 }

@@ -12,8 +12,8 @@
     color: var(--color-text-primary);
     background: var(--color-background);
     transition:
-      color var(--duration-normal) var(--easing-standard),
-      background-color var(--duration-normal) var(--easing-standard);
+      color var(--duration-normal) var(--ease-in),
+      background-color var(--duration-normal) var(--ease-in);
   }
 
   a {
