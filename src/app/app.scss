@@ -10,7 +10,7 @@
     position: sticky;
     inset-block-start: 0;
     z-index: var(--z-sticky);
-    background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+    background: color-mix(in srgb, var(--color-surface) 100%, transparent);
     border-block-end: 1px solid var(--color-border);
     backdrop-filter: blur(0.75rem);
 
@@ -20,14 +20,14 @@
       gap: var(--spacing-3);
       align-items: center;
       justify-content: space-between;
-      min-block-size: 4.5rem;
+      min-block-size: var(--spacing-16);
       padding-block: var(--spacing-3);
     }
 
     &__controls {
       display: flex;
       flex-wrap: wrap;
-      gap: var(--spacing-6);
+      gap: var(--spacing-8);
       align-items: center;
     }
   }
@@ -42,9 +42,9 @@
     border-radius: var(--radius-pill);
 
     &__button {
+      padding: var(--spacing-2) var(--spacing-4);
       font-size: var(--font-size-sm);
       line-height: var(--font-line-height-sm);
-      padding: var(--spacing-2) var(--spacing-4);
       color: var(--color-text-secondary);
       cursor: pointer;
       background: transparent;

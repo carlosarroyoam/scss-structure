@@ -5,7 +5,7 @@
 @layer layout {
   .container {
     inline-size: min(
-      100% - (2 * var(--container-gutter, clamp(var(--spacing-5), 4vw, var(--spacing-8)))),
+      100% - (2 * var(--container-gutter, clamp(var(--spacing-4), 4vw, var(--spacing-8)))),
       var(--content-max-width)
     );
     margin-inline: auto;
