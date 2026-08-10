@@ -29,14 +29,15 @@ There is no e2e framework configured.
 Layer order is declared once in `src/styles.scss`: `@layer reset, tokens, base, layout, components, utilities;`. Every partial wraps its rules in the matching `@layer` block, so cascade order is explicit regardless of source order. Component styles (e.g. `app.scss`) belong to the `components` layer.
 
 Directory responsibilities:
-- `tokens/` — `_primitives.scss` holds private Sass maps (space, radius, breakpoints) not consumed directly by components. `_semantic.scss` exposes `emit-foundation`, the single mixin (included once, in `styles.scss`) that writes non-theme CSS custom properties (`--space-*`, `--radius-*`, `--font-*`, `--shadow-*`, `--duration-*`, `--z-*`) into `:root` under `@layer tokens`.
+
+- `tokens/` — `_primitives.scss` holds private Sass maps (space, radius, breakpoints) not consumed directly by components. `_semantic.scss` exposes `emit-foundation`, the single mixin (included once, in `styles.scss`) that writes non-theme CSS custom properties (`--spacing-*`, `--radius-*`, `--font-*`, `--shadow-*`, `--duration-*`, `--z-*`) into `:root` under `@layer tokens`.
 - `themes/` — `_palette.scss` holds private `$light-colors`/`$dark-colors` maps. `_light.scss`/`_dark.scss` turn a palette into `--color-*` custom properties via a private `values` mixin. `_index.scss` exposes `emit-themes` (included once, in `styles.scss`), which wires up `:root[data-theme="light"]`, `:root[data-theme="dark"]`, and `@media (prefers-color-scheme: dark)` for `:root:not([data-theme])`. This is the pattern to extend for new theme-dependent tokens — never hardcode colors in component styles.
 - `base/` — reset, document defaults, typography, accessibility (focus-visible ring, reduced-motion, forced-colors), print. Forwarded individually from `styles.scss`, not through an `_index.scss`.
-- `layout/` — composable layout primitives (`.container`, `.stack`, `.cluster`) that expose a local custom-property override point (e.g. `--stack-space`, `--cluster-space`, `--container-gutter`) with a token-based default. Follow this override-point pattern for any new layout primitive.
+- `layout/` — composable layout primitives (`.container`) that expose a local custom-property override point (e.g. `--container-gutter`) with a token-based default. Follow this override-point pattern for any new layout primitive.
 - `tools/` — Sass-only helpers with **zero CSS output**: `rem()` px→rem conversion, `respond-to`/`respond-below` breakpoint mixins, `focus-ring`/`sr-only`/`motion-safe`/`reduced-motion` mixins. Forwarded as a unit via `tools/_index.scss`; components `@use 'styles/tools' as tools;` and call e.g. `tools.respond-to('md')`.
 - `utilities/` — small single-purpose classes (`.flow`, `.block`, `.hidden`, `.text-center`, `.visually-hidden`, `.skip-link`), forwarded as a unit via `utilities/_index.scss`.
 
-Naming convention in components: BEM-like blocks with `&__element` nesting (see `app.scss`'s `.app-header`, `.theme-selector`, `.hero`), local custom properties for per-instance overrides, all values sourced from `--color-*`/`--space-*`/`--font-*`/etc. tokens rather than literals.
+Naming convention in components: BEM-like blocks with `&__element` nesting (see `app.scss`'s `.app-header`, `.theme-selector`, `.hero`), local custom properties for per-instance overrides, all values sourced from `--color-*`/`--spacing-*`/`--font-*`/etc. tokens rather than literals.
 
 ### Stylelint constraints (`stylelint.config.mjs`) — these will fail CI/hooks if violated
 
@@ -51,6 +52,7 @@ Global SCSS include path is `src` (see `angular.json` → `stylePreprocessorOpti
 ## Angular architecture (`src/app/`)
 
 Small app; folders are organized by layer, not by feature (feature-based subfolders should be introduced under `core/` and `shared/` as needed, following the same pattern):
+
 - `core/` — singleton, app-wide concerns: `constants/`, `data-access/services/` (e.g. the abstract `StorageService` in `storage-service.ts`, extended by `LocalStorageService`/`SessionStorageService` for namespacing + TTL-aware JSON storage).
 - `shared/` — reusable, non-singleton-scoped-by-nature pieces consumed across features, e.g. `services/theme-service/`.
 

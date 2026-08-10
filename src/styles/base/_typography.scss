@@ -1,26 +1,28 @@
 @layer base {
   body {
-    font-size: var(--font-size-md);
-    line-height: var(--line-height-normal);
+    font-size: var(--font-size-base);
+    line-height: var(--font-line-height-base);
   }
 
   h1,
   h2,
   h3 {
-    line-height: var(--line-height-tight);
     text-wrap: balance;
   }
 
   h1 {
     font-size: var(--font-size-3xl);
+    line-height: var(--font-line-height-3xl);
   }
 
   h2 {
     font-size: var(--font-size-2xl);
+    line-height: var(--font-line-height-2xl);
   }
 
   h3 {
     font-size: var(--font-size-lg);
+    line-height: var(--font-line-height-lg);
   }
 
   p {

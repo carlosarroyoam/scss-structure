@@ -6,8 +6,6 @@
 @use 'styles/base/accessibility';
 @use 'styles/base/print';
 @use 'styles/layout/container';
-@use 'styles/layout/stack';
-@use 'styles/layout/cluster';
 @use 'styles/utilities';
 @layer reset, tokens, base, layout, components, utilities;
 @include tokens.emit-foundation;

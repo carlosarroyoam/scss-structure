@@ -15,28 +15,36 @@
     backdrop-filter: blur(0.75rem);
 
     &__content {
-      --cluster-alignment: center;
-
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-3);
+      align-items: center;
       justify-content: space-between;
       min-block-size: 4.5rem;
-      padding-block: var(--space-3);
+      padding-block: var(--spacing-3);
     }
 
     &__controls {
-      --cluster-space: var(--space-6);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-6);
+      align-items: center;
     }
   }
 
   .theme-selector {
-    --cluster-space: var(--space-1);
-
-    padding: var(--space-0-5);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: var(--spacing-0-5);
     background: var(--color-surface-muted);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-pill);
 
     &__button {
-      padding: var(--space-2) var(--space-3);
+      font-size: var(--font-size-sm);
+      line-height: var(--font-line-height-sm);
+      padding: var(--spacing-2) var(--spacing-4);
       color: var(--color-text-secondary);
       cursor: pointer;
       background: transparent;
@@ -51,7 +59,10 @@
   }
 
   .app-nav {
-    --cluster-space: var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-4);
+    align-items: center;
 
     &__link {
       color: var(--color-text-secondary);
@@ -66,8 +77,9 @@
   }
 
   .app-main {
-    --stack-space: var(--space-8);
-
-    padding-block: var(--space-16);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+    padding-block: var(--spacing-4);
   }
 }

@@ -1,29 +1,31 @@
 <a class="skip-link" href="#main-content">Saltar al contenido</a>
 
 <header class="app-header">
-  <div class="app-header__content container cluster">
+  <div class="app-header__content container">
     <strong>SCSS Architecture</strong>
 
-    <div class="app-header__controls cluster">
-      <nav class="app-nav cluster" aria-label="Principal">
+    <div class="app-header__controls">
+      <nav class="app-nav" aria-label="Principal">
         <a
           class="app-nav__link"
           routerLink="/"
           routerLinkActive
           [routerLinkActiveOptions]="{ exact: true }"
           [ariaCurrentWhenActive]="'page'"
-          >Inicio</a
         >
+          Inicio
+        </a>
         <a
           class="app-nav__link"
           routerLink="/estilos"
           routerLinkActive
           [ariaCurrentWhenActive]="'page'"
-          >Guía de estilos</a
         >
+          Guía de estilos
+        </a>
       </nav>
 
-      <div class="theme-selector cluster" role="group" aria-label="Tema visual">
+      <div class="theme-selector" role="group" aria-label="Tema visual">
         @for (option of themeOptions; track option.value) {
           <button
             class="theme-selector__button"
@@ -39,6 +41,6 @@
   </div>
 </header>
 
-<main id="main-content" class="app-main container stack" tabindex="-1">
+<main id="main-content" class="app-main container" tabindex="-1">
   <router-outlet />
 </main>

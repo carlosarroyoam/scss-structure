@@ -7,7 +7,9 @@
 
   .style-guide {
     &__intro {
-      --stack-space: var(--space-3);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-3);
     }
 
     &__summary {
@@ -16,13 +18,15 @@
     }
 
     &__section {
-      --stack-space: var(--space-4);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-4);
     }
 
     &__swatch-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-4);
+      gap: var(--spacing-4);
 
       @include tools.respond-to('md') {
         grid-template-columns: repeat(4, 1fr);
@@ -32,21 +36,21 @@
     &__swatch {
       display: flex;
       flex-direction: column;
-      gap: var(--space-2);
+      gap: var(--spacing-2);
     }
 
     &__swatch-color {
       display: block;
       inline-size: 100%;
-      block-size: var(--space-16);
+      block-size: var(--spacing-16);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
     }
 
     &__radius-box {
       display: block;
-      inline-size: var(--space-16);
-      block-size: var(--space-16);
+      inline-size: var(--spacing-16);
+      block-size: var(--spacing-16);
       background: var(--color-surface-muted);
       border: 1px solid var(--color-border);
     }
@@ -54,18 +58,18 @@
     &__scale {
       display: flex;
       flex-direction: column;
-      gap: var(--space-2);
+      gap: var(--spacing-2);
     }
 
     &__scale-row {
       display: flex;
-      gap: var(--space-3);
+      gap: var(--spacing-3);
       align-items: center;
     }
 
     &__scale-bar {
       display: block;
-      block-size: var(--space-4);
+      block-size: var(--spacing-4);
       background: var(--color-action-primary);
       border-radius: var(--radius-sm);
     }
@@ -80,42 +84,18 @@
     }
 
     &__shadow-card {
-      padding: var(--space-6);
+      padding: var(--spacing-6);
       background: var(--color-surface);
-      border-radius: var(--radius-lg);
+      border-radius: var(--radius-md);
     }
 
     &__z-list {
       display: flex;
       flex-direction: column;
-      gap: var(--space-1);
-      padding-inline-start: var(--space-5);
+      gap: var(--spacing-1);
+      padding-inline-start: var(--spacing-5);
       margin: 0;
       color: var(--color-text-secondary);
-    }
-
-    &__demo-cluster {
-      --cluster-space: var(--space-2);
-    }
-
-    &__demo-stack {
-      --stack-space: var(--space-2);
-    }
-
-    &__tag {
-      padding: var(--space-1) var(--space-3);
-      font-size: var(--font-size-sm);
-      color: var(--color-on-action);
-      background: var(--color-action-primary);
-      border-radius: var(--radius-pill);
-    }
-
-    &__demo-box {
-      padding: var(--space-3);
-      text-align: center;
-      background: var(--color-surface-muted);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
     }
   }
 }
