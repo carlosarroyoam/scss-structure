@@ -1,34 +1,88 @@
-// Color maps private to the themes module. These live here (rather than in
-// tokens/primitives) because themes are their only consumer.
+@use 'sass:map';
+@use 'scales';
+
+// Color maps private to the themes module. Values are picked from the raw
+// scales in `_scales.scss`; keep both maps on the same set of keys since
+// `_light.scss`/`_dark.scss` iterate them generically.
 
 $light-colors: (
-  background: #f7f8fa,
-  surface: #fff,
-  surface-muted: #edf1f6,
-  text-primary: #172033,
-  text-secondary: #526077,
-  border: #c5cdd8,
-  action-primary: #2457c5,
-  action-primary-hover: #183f96,
-  on-action: #fff,
-  focus-ring: #075fb9,
-  success: #147a42,
-  warning: #b3650d,
-  danger: #b42318,
+  // Surfaces
+  background: map.get(scales.$neutral, 100),
+  surface: map.get(scales.$neutral, 50),
+  surface-muted: map.get(scales.$neutral, 100),
+  // Text
+  text-primary: map.get(scales.$neutral, 900),
+  text-secondary: map.get(scales.$neutral, 600),
+  text-disabled: map.get(scales.$neutral, 400),
+  // Borders
+  border: map.get(scales.$neutral, 300),
+  border-disabled: map.get(scales.$neutral, 200),
+  // Focus & overlay
+  focus-ring: map.get(scales.$primary, 500),
+  overlay: rgb(0 0 0 / 40%),
+  // Primary
+  primary: map.get(scales.$primary, 600),
+  primary-hover: map.get(scales.$primary, 700),
+  on-primary: map.get(scales.$neutral, 50),
+  // Accent
+  accent: map.get(scales.$accent, 600),
+  accent-hover: map.get(scales.$accent, 700),
+  on-accent: map.get(scales.$neutral, 50),
+  // Success
+  success: map.get(scales.$success, 600),
+  success-surface: map.get(scales.$success, 100),
+  on-success: map.get(scales.$neutral, 50),
+  // Warning
+  warning: map.get(scales.$warning, 600),
+  warning-surface: map.get(scales.$warning, 100),
+  on-warning: map.get(scales.$neutral, 50),
+  // Danger
+  danger: map.get(scales.$danger, 600),
+  danger-surface: map.get(scales.$danger, 100),
+  on-danger: map.get(scales.$neutral, 50),
+  // Info
+  info: map.get(scales.$info, 600),
+  info-surface: map.get(scales.$info, 100),
+  on-info: map.get(scales.$neutral, 50),
 );
 
 $dark-colors: (
-  background: #111827,
-  surface: #182235,
-  surface-muted: #233047,
-  text-primary: #f6f8fb,
-  text-secondary: #bdc7d8,
-  border: #526178,
-  action-primary: #8ab4ff,
-  action-primary-hover: #b6ceff,
-  on-action: #0b1730,
-  focus-ring: #9dc1ff,
-  success: #76d49d,
-  warning: #d4cb76,
-  danger: #ffb4ab,
+  // Surfaces
+  background: map.get(scales.$neutral, 950),
+  surface: map.get(scales.$neutral, 900),
+  surface-muted: map.get(scales.$neutral, 800),
+  // Text
+  text-primary: map.get(scales.$neutral, 50),
+  text-secondary: map.get(scales.$neutral, 200),
+  text-disabled: map.get(scales.$neutral, 600),
+  // Borders
+  border: map.get(scales.$neutral, 800),
+  border-disabled: map.get(scales.$neutral, 700),
+  // Focus & overlay
+  focus-ring: map.get(scales.$primary, 200),
+  overlay: rgb(0 0 0 / 60%),
+  // Primary
+  primary: map.get(scales.$primary, 400),
+  primary-hover: map.get(scales.$primary, 300),
+  on-primary: map.get(scales.$primary, 950),
+  // Accent
+  accent: map.get(scales.$accent, 300),
+  accent-hover: map.get(scales.$accent, 200),
+  on-accent: map.get(scales.$accent, 950),
+  // Success
+  success: map.get(scales.$success, 300),
+  success-surface: map.get(scales.$success, 900),
+  on-success: map.get(scales.$success, 950),
+  // Warning
+  warning: map.get(scales.$warning, 300),
+  warning-surface: map.get(scales.$warning, 900),
+  on-warning: map.get(scales.$warning, 950),
+  // Danger
+  danger: map.get(scales.$danger, 300),
+  danger-surface: map.get(scales.$danger, 900),
+  on-danger: map.get(scales.$danger, 950),
+  // Info
+  info: map.get(scales.$info, 300),
+  info-surface: map.get(scales.$info, 900),
+  on-info: map.get(scales.$info, 950),
 );

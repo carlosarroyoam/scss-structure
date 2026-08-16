@@ -12,15 +12,15 @@
     max-inline-size: 52rem;
 
     &__eyebrow {
-      font-size: var(--font-size-sm);
+      font-size: var(--font-size-xs);
       font-weight: var(--font-weight-bold);
-      color: var(--color-action-primary);
+      color: var(--color-primary);
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
 
     &__summary {
-      font-size: var(--font-size-md);
+      font-size: var(--font-size-base);
       color: var(--color-text-secondary);
     }
   }
@@ -28,7 +28,7 @@
   .principles {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-6);
+    gap: var(--spacing-4);
 
     &__grid {
       display: grid;
@@ -44,12 +44,12 @@
   .principle {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-2);
+    gap: var(--spacing-1);
     padding: var(--spacing-4) var(--spacing-6);
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-xs);
 
     p {
       color: var(--color-text-secondary);

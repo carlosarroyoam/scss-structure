@@ -1,28 +1,29 @@
 @layer base {
   body {
     font-size: var(--font-size-base);
-    line-height: var(--font-line-height-base);
+    line-height: var(--line-height-base);
   }
 
   h1,
   h2,
   h3 {
+    font-weight: var(--font-weight-bold);
     text-wrap: balance;
   }
 
   h1 {
     font-size: var(--font-size-3xl);
-    line-height: var(--font-line-height-3xl);
+    line-height: var(--line-height-3xl);
   }
 
   h2 {
-    font-size: var(--font-size-2xl);
-    line-height: var(--font-line-height-2xl);
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
   }
 
   h3 {
-    font-size: var(--font-size-lg);
-    line-height: var(--font-line-height-lg);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
   }
 
   p {

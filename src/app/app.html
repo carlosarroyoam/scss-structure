@@ -30,7 +30,7 @@
           <button
             class="theme-selector__button"
             type="button"
-            [attr.aria-pressed]="themePreference() === option.value"
+            [attr.aria-selected]="themePreference() === option.value"
             (click)="setTheme(option.value)"
           >
             {{ option.label }}

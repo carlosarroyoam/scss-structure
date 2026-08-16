@@ -25,13 +25,15 @@ export class StyleGuide {
     { variable: '--color-text-primary', style: 'var(--color-text-primary)' },
     { variable: '--color-text-secondary', style: 'var(--color-text-secondary)' },
     { variable: '--color-border', style: 'var(--color-border)' },
-    { variable: '--color-action-primary', style: 'var(--color-action-primary)' },
-    { variable: '--color-action-primary-hover', style: 'var(--color-action-primary-hover)' },
-    { variable: '--color-on-action', style: 'var(--color-on-action)' },
     { variable: '--color-focus-ring', style: 'var(--color-focus-ring)' },
+    { variable: '--color-primary', style: 'var(--color-primary)' },
+    { variable: '--color-primary-hover', style: 'var(--color-primary-hover)' },
+    { variable: '--color-on-primary', style: 'var(--color-on-primary)' },
+    { variable: '--color-accent', style: 'var(--color-accent)' },
     { variable: '--color-success', style: 'var(--color-success)' },
     { variable: '--color-warning', style: 'var(--color-warning)' },
     { variable: '--color-danger', style: 'var(--color-danger)' },
+    { variable: '--color-info', style: 'var(--color-info)' },
   ];
 
   // Mirrors src/styles/tokens/_primitives.scss $space — keep the labels in sync.
@@ -65,7 +67,7 @@ export class StyleGuide {
     { variable: '--radius-xl', label: '0.75rem', style: 'var(--radius-xl)' },
     { variable: '--radius-2xl', label: '1rem', style: 'var(--radius-2xl)' },
     { variable: '--radius-3xl', label: '1.5rem', style: 'var(--radius-3xl)' },
-    { variable: '--radius-pill', label: '2rem', style: 'var(--radius-pill)' },
+    { variable: '--radius-full', label: '2rem', style: 'var(--radius-full)' },
   ];
 
   // Mirrors src/styles/tokens/_semantic.scss font-size scale — keep the labels in sync.
