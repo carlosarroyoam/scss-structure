@@ -23,7 +23,7 @@ describe('StyleGuide', () => {
     const compiled = fixture.nativeElement as HTMLElement;
 
     // Mirrors the number of entries in the component's colorTokens array.
-    expect(compiled.querySelectorAll('.style-guide__swatch-color').length).toBe(12);
+    expect(compiled.querySelectorAll('.swatch-color').length).toBe(12);
   });
 
   it('has no detectable accessibility violations', async () => {

@@ -1,14 +1,6 @@
 // Private compile-time scales. Components consume the generated `--spacing-*`
 // custom properties instead of importing these maps directly.
 
-$breakpoints: (
-  'sm': 40rem,
-  'md': 48rem,
-  'lg': 64rem,
-  'xl': 80rem,
-  'xxl': 96rem,
-);
-
 $space: (
   px: 1px,
   0: 0,
@@ -56,4 +48,12 @@ $radius: (
   2xl: 1rem,
   3xl: 1.5rem,
   pill: 999rem,
+);
+
+$breakpoints: (
+  'sm': 40rem,
+  'md': 48rem,
+  'lg': 64rem,
+  'xl': 80rem,
+  'xxl': 96rem,
 );

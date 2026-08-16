@@ -30,6 +30,7 @@ export class StyleGuide {
     { variable: '--color-on-action', style: 'var(--color-on-action)' },
     { variable: '--color-focus-ring', style: 'var(--color-focus-ring)' },
     { variable: '--color-success', style: 'var(--color-success)' },
+    { variable: '--color-warning', style: 'var(--color-warning)' },
     { variable: '--color-danger', style: 'var(--color-danger)' },
   ];
 
