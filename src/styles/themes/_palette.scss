@@ -15,7 +15,7 @@ $light-colors: (
   text-secondary: map.get(scales.$neutral, 600),
   text-disabled: map.get(scales.$neutral, 400),
   // Borders
-  border: map.get(scales.$neutral, 300),
+  border: map.get(scales.$neutral, 200),
   border-disabled: map.get(scales.$neutral, 200),
   // Focus & overlay
   focus-ring: map.get(scales.$primary, 500),
